@@ -25,6 +25,7 @@ public:
     std::vector<int> vertex_y; // Vector contains y-components of all vertices (nodes)
     int size_graph; // Size of the Graph in terms of numbers of nodes
     int source_node; // Source node
+    float max_distance; // Maximum allowed Euclidean distance for two nodes to have an edge between them
 
 
 /*****************************************************************************
@@ -36,7 +37,7 @@ public:
 /*****************************************************************************
 * Overloading Constructor
 *****************************************************************************/    
-    Graph(int, int);
+    Graph(int, int, float);
 
 
 /*****************************************************************************

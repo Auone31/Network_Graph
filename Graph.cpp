@@ -17,6 +17,7 @@ Graph::Graph()
 {
     size_graph = 20;
     source_node = 10;
+    max_distance = 50;
     for (int i = 0; i < size_graph; ++i)
     {
         std::uniform_int_distribution<int> distribution(1,100);
@@ -33,10 +34,11 @@ Graph::Graph()
 * Generates user specified numer of nodes which are uniformly distributed 
 *
 ****************************************************************************/
-Graph::Graph(int sg, int sn)
+Graph::Graph(int sg, int sn, float md)
 {
     size_graph = sg;
     source_node = sn;
+    max_distance = md;
     for (int i = 0; i < size_graph; ++i)
     {
         std::uniform_int_distribution<int> distribution(1,100);
@@ -101,7 +103,7 @@ void Graph::draw_graph()
         for (int i = j; i < size_graph; ++i)
         {
             distance = sqrt(pow((vertex_x[j] - vertex_x[i]),2) + pow((vertex_y[j] - vertex_y[i]),2));
-            if ((i != j) && distance <= 50)
+            if ((i != j) && distance <= max_distance)
             {
                 command.append("plt.plot([");
                 command.append(std::to_string(vertex_x[j]));
