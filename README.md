@@ -4,4 +4,5 @@ Code generates and draws a network graph. This project will later be integrated 
 # Dependencies
 
 1 - Python 2.7 (Python.h)
+
 2 - matplotlib 
