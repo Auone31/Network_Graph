@@ -31,7 +31,7 @@ Graph::Graph()
 * Constructor
 *****************************************************************************
 *
-* Generates user specified numer of nodes which are uniformly distributed 
+* Generates user specified number of nodes which are uniformly distributed 
 *
 ****************************************************************************/
 Graph::Graph(int sg, int sn, float md)
@@ -55,7 +55,7 @@ Graph::Graph(int sg, int sn, float md)
 * Draws the graph showing all vertices and edges. Invokes Python and 
 * utilizes matplotlib.pyplot for plotting the graph. 
 * IMPORTANT: An edge exists between two vertices if the Euclidean distance
-* between them is no larger than 50.
+* between them is no larger than max_distance.
 *
 ****************************************************************************/
 void Graph::draw_graph()
